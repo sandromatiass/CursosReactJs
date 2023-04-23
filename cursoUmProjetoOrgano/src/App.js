@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import Banner from './components/Banner';
 import Formulario from './components/Formulario';
 import Time from './components/Time';
 import Footer from './components/Footer'
 import { listaTimes } from './components/ListaSuspensa/Lista';
+import BannerPrincipal from './components/Banner/BannerPrincipal';
+
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <Banner />
+      <BannerPrincipal />
       <Formulario
         times={listaTimes.map((times) => times.nome)}
         aoJogadorCadastrado={(jogador) => aoNovoJogadorAdicionado(jogador)}

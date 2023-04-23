@@ -1,8 +1,16 @@
 .banner{
-    background-color: #6278f7;
     text-align: center;
+    max-width: 100%;
 }
 
-.banner img {
-    max-width: 100%;
+
+.inner {
+    display: flex;
+}
+
+/*overflow e usado para o que passar do limite imposto lá em banne max-width ele corta*/
+
+.carousel {
+    cursor: grab;
+    overflow: hidden;
 }

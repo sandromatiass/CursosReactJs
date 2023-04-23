@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
     margin: 80px 0;
+    background-image: url('../../../public/Imagens/jogador.svg') ;
+    background-repeat: no-repeat;
+    background-position-x: 20px;
 }
 
 .formulario form {
@@ -12,3 +15,9 @@
     padding: 36px 64px;
 }
 
+@media (max-width: 1700px){
+    .formulario{
+        background-image: none;
+    }
+    
+}
