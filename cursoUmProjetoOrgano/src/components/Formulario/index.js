@@ -2,12 +2,12 @@ import { useState } from "react";
 import Botao from "../Botao";
 import CampoTexto from "../CampoTexto";
 import ListaSuspensa from "../ListaSuspensa";
-import {listaConferencias, listaDivisao, listaPosicao } from "../ListaSuspensa/Lista"
+import { listaConferencias, listaDivisao, listaPosicao, listaTimes } from "../ListaSuspensa/Lista"
 import "./Formulario.css";
 
 const Formulario = (props) => {
   
-  const [jogador, setJogador] = useState('')
+  const [jogadorNome, setJogadorNome] = useState('')
   const [altura, setAltura] = useState('')
   const [peso ,setPeso] = useState('')
   const [universidade, setUniversidade] = useState('')
@@ -17,15 +17,13 @@ const Formulario = (props) => {
   const [divisao, setDivisao] = useState('')
   const [times, setTimes] = useState('')
   
-  const listaTimes =  [
-      "sandro",
-      "MATIAS" 
-  ];
+  
+ 
 
   const aoSalvar = (evento) => {
       evento.preventDefault()
       props.aoJogadorCadastrado({
-        jogador,
+        jogadorNome,
         altura,
         peso,
         universidade,
@@ -35,6 +33,17 @@ const Formulario = (props) => {
         divisao,
         times
       })
+
+      setJogadorNome('')
+      setAltura('')
+      setImagem('')
+      setPeso('')
+      setDivisao('')
+      setConferencias('')
+      setPosicao('')
+      setUniversidade('')
+      setTimes('')
+    
   }
 
   return (
@@ -45,8 +54,8 @@ const Formulario = (props) => {
           obrigatorio={true}
           label="Jogador"
           placeholder="Digite o nome do jogador"
-          valor={jogador}
-          aoAlterado={(valor) => setJogador(valor)}
+          valor={jogadorNome}
+          aoAlterado={(valor) => setJogadorNome(valor)}
         />
 
         <CampoTexto
@@ -107,8 +116,8 @@ const Formulario = (props) => {
 
         <ListaSuspensa
           obrigatorio={true}
-          label="Time"
-          itens={listaTimes}
+          label="Times"
+          itens={listaTimes.map(nomeTimes => nomeTimes.nome)}
           valor={times}
           aoAlterado={(valor) => setTimes(valor)}
         />

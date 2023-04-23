@@ -1,6 +1,13 @@
 .time {
-    text-align: center;
+    text-align: left;
     padding: 32px;
+    box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
+    color: aliceblue;
+}
+
+.time p{
+    color: black; 
+    font-weight: 700;
 }
 
 .time h3 {
@@ -8,4 +15,11 @@
     border-bottom: 4px solid #7a7a7a;
     display: inline-block;
     padding-bottom: 8px;
+}
+
+.time .jogadores {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
 }

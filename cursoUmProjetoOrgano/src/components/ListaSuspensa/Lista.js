@@ -1,5 +1,4 @@
 export const listaPosicao = [
-  "Escolher...",
   "Ala-Pivô",
   "Ala",
   "Pivô",
@@ -8,26 +7,24 @@ export const listaPosicao = [
 ];
 
 export const listaConferencias = [
-  "Escolher...",
-  "Conferêcia Leste",
-  "Conferêcia Oeste"
+  "Leste",
+  "Oeste"
 ];
 
 export const listaDivisao = [
-  "Escolher...",
-  "Divisão Atlântico",
-  "Divisão Central",
-  "Divisão Sudeste",
-  "Divisão Noroeste",
-  "Divisão Pacífico",
-  "Divisão Sudoeste"
+  "Atlântico",
+  "Central",
+  "Sudeste",
+  "Noroeste",
+  "Pacífico",
+  "Sudoeste"
 ];
 
 export const listaTimes = [
   {
     nome: "Boston Celtics",
-    corPrimaria: "#025928",
-    corSecundaria: "#ffffff",
+    corPrimaria: "#AE8C64",
+    corSecundaria: "#02A85D",
   },
   {
     nome: "Brooklyn Nets",
@@ -36,23 +33,23 @@ export const listaTimes = [
   },
   {
     nome: "New York Knicks",
-    corPrimaria: "#F27127",
-    corSecundaria: "#184A8C",
+    corPrimaria: "#EF6219",
+    corSecundaria: "#00399E",
   },
   {
     nome: "Philadelphia 76ers",
-    corPrimaria: "#F27127",
-    corSecundaria: "#184A8C",
+    corPrimaria: "#EFEFEF",
+    corSecundaria: "#006BB6",
   },
   {
     nome: "Toronto Raptors",
-    corPrimaria: "#F27127",
-    corSecundaria: "#184A8C",
+    corPrimaria: "#000000",
+    corSecundaria: "#C31741",
   },
   {
     nome: "Chicago Bulls",
-    corPrimaria: "#F27127",
-    corSecundaria: "#184A8C",
+    corPrimaria: "#000000",
+    corSecundaria: "#C3103E",
   },
   {
     nome: "Cleveland Cavaliers",
@@ -111,7 +108,7 @@ export const listaTimes = [
   },
   {
     nome: "Portland Trail Blazers",
-    corPrimaria: "#F27127",
+    corPrimaria: "black",
     corSecundaria: "#184A8C",
   },
   {

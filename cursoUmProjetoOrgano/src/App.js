@@ -6,23 +6,31 @@ import { listaTimes } from './components/ListaSuspensa/Lista';
 
 function App() {
 
-  const [jogadores, setJogador] = useState([])
+  const [jogadores, setJogadores] = useState([])
   
   const aoNovoJogadorAdicionado = (jogador) => {
-    console.log(jogador)
-    setJogador(...jogadores, jogador)
+    debugger
+    setJogadores([...jogadores, jogador]);
   }
-
 
   return (
     <div className="App">
       <Banner />
       <Formulario
+        times={listaTimes.map(times => times.nome)}
         aoJogadorCadastrado={(jogador) => aoNovoJogadorAdicionado(jogador)}
       />
 
-      {listaTimes.map(time => <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>) }
-      
+      {listaTimes.map((times) => (
+        <Time
+          key={times.nome}
+          nome={times.nome}
+          corPrimaria={times.corPrimaria}
+          corSecundaria={times.corSecundaria}
+          //aqui e passado um estado que serve como gatilho para renderizar o codigo
+          jogadores={jogadores.filter(jogador => jogador.times === times.nome)}
+        />
+      ))}
     </div>
   );
 }
