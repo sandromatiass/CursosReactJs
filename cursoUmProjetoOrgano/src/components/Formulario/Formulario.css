@@ -15,7 +15,7 @@
     padding: 36px 64px;
 }
 
-@media (max-width: 1700px){
+@media  (max-width:1200px){
     .formulario{
         background-image: none;
     }
