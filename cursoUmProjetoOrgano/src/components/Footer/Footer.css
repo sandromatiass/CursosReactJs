@@ -1,8 +1,20 @@
 .footer {
-    background-color: #6278f7;
-    max-width: 100%;  
+    display: flex;
+    align-items: center;
+    background-color: #777777;
+    background-image: url("../../../public/Imagens/fundo.png");
+    background-repeat: repeat;
+    height: 35vh;
+    max-width: 100%;
 }
 
-.footer img {
-    max-width: 100%;
+
+.rede_sociais ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.rede_sociais img {
+    width: 42px;
 }
