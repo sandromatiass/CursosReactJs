@@ -15,6 +15,11 @@ function App() {
     setJogadores([...jogadores, jogador]);
   }
 
+  //função deletar
+  function deletarJogador(){
+    console.log('teste de delete')
+  }
+
   return (
     <div className="App">
       <BannerPrincipal />
@@ -31,8 +36,8 @@ function App() {
           corSecundaria={times.corSecundaria}
           //aqui e passado um estado que serve como gatilho para renderizar o codigo
           jogadores={jogadores.filter(
-            (jogador) => jogador.times === times.nome
-          )}
+            (jogador) => jogador.times === times.nome)}
+            aoDeletar={deletarJogador}
         />
       ))}
       <Footer />

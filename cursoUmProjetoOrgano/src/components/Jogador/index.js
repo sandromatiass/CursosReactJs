@@ -1,10 +1,12 @@
+import { AiFillCloseCircle } from 'react-icons/ai';
 import './Jogador.css'
 
 //outra maneira de importar
 
-const Jogador = ({ imagem, altura , peso, divisao, conferencias , universidade, posicao, jogadorNome , times , corDeFundo}) => {
+const Jogador = ({ imagem, altura , peso, divisao, conferencias , universidade, posicao, jogadorNome , times , corDeFundo, aoDeletar}) => {
     return (
       <div className="jogador">
+        <AiFillCloseCircle size={25} className='deletar' onClick={aoDeletar} />
         <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
           <img src={imagem} alt="teste" />
         </div>

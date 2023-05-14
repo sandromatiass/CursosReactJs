@@ -14,8 +14,9 @@ const Time = (props) => {
 
           <div className="jogadores">
             {props.jogadores.map((jogador) => (
-              <Jogador
+            <Jogador
                 //o nome da prop deve ter o nome do parametro
+                aoDeletar={props.aoDeletar}
                 corDeFundo={props.corPrimaria}
                 key={jogador.jogadorNome}
                 jogadorNome={jogador.jogadorNome}
