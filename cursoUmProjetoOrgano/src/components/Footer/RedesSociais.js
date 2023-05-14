@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const RedesSociais = () => {
   return (
     <div className="rede_sociais">
