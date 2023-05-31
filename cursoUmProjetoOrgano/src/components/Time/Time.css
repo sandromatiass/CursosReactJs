@@ -23,3 +23,8 @@
     margin-top: 32px;
     flex-wrap: wrap;
 }
+
+.input-cor {
+    position: absolute;
+    top: 20px;
+}

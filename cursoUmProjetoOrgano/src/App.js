@@ -14,6 +14,10 @@ function App() {
     debugger
     setJogadores([...jogadores, jogador]);
   }
+function deletarColaboradores(){
+  console.log("teste")
+}
+
 
   return (
     <div className="App">
@@ -30,6 +34,7 @@ function App() {
           corPrimaria={times.corPrimaria}
           corSecundaria={times.corSecundaria}
           //aqui e passado um estado que serve como gatilho para renderizar o codigo
+          aoDeletar={deletarColaboradores}
           jogadores={jogadores.filter(
             (jogador) => jogador.times === times.nome
           )}
