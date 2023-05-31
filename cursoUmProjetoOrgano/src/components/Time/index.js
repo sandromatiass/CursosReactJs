@@ -3,7 +3,7 @@ import './Time.css'
 
 
 
-const Time = (props) => {
+const Time = (props, mudarCor) => {
 
     const fundo = {backgroundColor:props.corSecundaria}
       
@@ -11,7 +11,13 @@ const Time = (props) => {
       //comparação se e verdadeiro ou falso e escondendo a sessão em nulo
       props.jogadores.length > 0 && (
         <section className="time" style={fundo}>
-          <input type="color" className="input-cor" />
+          
+          <input 
+          onChange={evento => mudarCor(evento.target.value, listaTime.nome)} 
+          value={props.corSecundaria} 
+          type="color" 
+          className="input-cor" />
+
           <h3 style={ {borderColor: props.corPrimaria } }>{props.nome}</h3>
 
           <div className="jogadores">

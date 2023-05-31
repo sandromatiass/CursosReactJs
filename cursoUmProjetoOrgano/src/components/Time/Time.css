@@ -3,6 +3,7 @@
     padding: 32px;
     box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
     color: aliceblue;
+    position: relative;
 }
 
 .time p{
@@ -27,4 +28,6 @@
 .input-cor {
     position: absolute;
     top: 20px;
+    right: 50px;
+
 }
