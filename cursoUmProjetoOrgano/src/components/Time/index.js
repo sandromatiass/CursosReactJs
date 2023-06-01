@@ -1,51 +1,47 @@
-import Jogador from '../Jogador'
-import './Time.css' 
+import React from 'react';
+import Jogador from '../Jogador';
+import './Time.css';
 
+const Time = (props) => {
+  const fundo = { backgroundColor: props.corUnica };
+  
+  const mudarCor = (evento) => {
+    props.mudarCor(evento.target.value, props.nome);
+  }
 
-
-const Time = (props, mudarCor) => {
-
-    const fundo = {backgroundColor:props.corSecundaria}
-      
-    return (
-      //comparação se e verdadeiro ou falso e escondendo a sessão em nulo
-      props.jogadores.length > 0 && (
-        <section className="time" style={fundo}>
-          
-          <input 
-          onChange={evento => mudarCor(evento.target.value, listaTime.nome)} 
-          value={props.corSecundaria} 
+  return (
+    props.jogadores.length > 0 && (
+      <section className="time" style={fundo}>
+        <input 
+          onChange={mudarCor} 
+          value={props.corUnica} 
           type="color" 
-          className="input-cor" />
+          className="input-cor" 
+        />
 
-          <h3 style={ {borderColor: props.corPrimaria } }>{props.nome}</h3>
+        <h3 style={{ borderColor: props.corUnica }}>{props.nome}</h3>
 
-          <div className="jogadores">
-            {props.jogadores.map((jogador) => {
-              return  (
-                <Jogador
-                  //o nome da prop deve ter o nome do parametro
-                  corDeFundo={props.corPrimaria}
-                  key={jogador.jogadorNome}
-                  jogadorNome={jogador.jogadorNome}
-                  altura={jogador.altura}
-                  peso={jogador.peso}
-                  universidade={jogador.universidade}
-                  conferencias={jogador.conferencias}
-                  posicao={jogador.posicao}
-                  divisao={jogador.divisao}
-                  times={jogador.times}
-                  imagem={jogador.imagem}
-                  aoDeletar={props.aoDeletar}
-                />
-              ) 
-            })}
-          </div>
-        </section>
-      )
-    );
+        <div className="jogadores">
+          {props.jogadores.map(jogador => (
+            <Jogador
+              corDeFundo={props.corUnica}
+              key={jogador.jogadorNome}
+              jogadorNome={jogador.jogadorNome}
+              altura={jogador.altura}
+              peso={jogador.peso}
+              universidade={jogador.universidade}
+              conferencias={jogador.conferencias}
+              posicao={jogador.posicao}
+              divisao={jogador.divisao}
+              times={jogador.times}
+              imagem={jogador.imagem}
+              aoDeletar={props.aoDeletar}
+            />
+          ))}
+        </div>
+      </section>
+    )
+  );
 }
 
-
-
-export default Time
+export default Time;

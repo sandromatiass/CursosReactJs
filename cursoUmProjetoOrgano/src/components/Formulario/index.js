@@ -17,7 +17,7 @@ const Formulario = (props) => {
   const [posicao, setPosicao] = useState('');
   const [divisao, setDivisao] = useState('')
   const [times, setTimes] = useState('')
-  const [listaTimes, setListaTimes] = useListaTimes([])
+  const [listaTimes] = useListaTimes([])
   
   
  
@@ -46,7 +46,6 @@ const Formulario = (props) => {
       setPosicao('')
       setUniversidade('')
       setTimes('')
-      setListaTimes('')
     
   }
 
@@ -121,7 +120,7 @@ const Formulario = (props) => {
         <ListaSuspensa
           obrigatorio={true}
           label="Times"
-          itens={listaTimes.map(nomeTimes => nomeTimes.nome)}
+          itens={Array.isArray(listaTimes) ? listaTimes.map(nomeTimes => nomeTimes.nome) : []}
           valor={times}
           aoAlterado={(valor) => setTimes(valor)}
         />
