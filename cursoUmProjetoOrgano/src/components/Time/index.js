@@ -1,9 +1,10 @@
 import React from 'react';
 import Jogador from '../Jogador';
 import './Time.css';
+import hexToRgba from 'hex-to-rgba'
 
 const Time = (props) => {
-  const fundo = { backgroundColor: props.corUnica };
+  const fundo = {backgroundColor: props.corUnica, opacity: 0.10};
   
   const mudarCor = (evento) => {
     props.mudarCor(evento.target.value, props.nome);
