@@ -19,8 +19,6 @@ const Formulario = (props) => {
   const [times, setTimes] = useState('')
   const [listaTimes] = useListaTimes([])
   
-  
- 
 
   const aoSalvar = (evento) => {
       evento.preventDefault()
